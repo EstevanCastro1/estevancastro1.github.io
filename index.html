@@ -14,8 +14,17 @@
     <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <!-- Header -->
-    {% include partials/header.html %}
+    <!-- Header (anteriormente include) -->
+    <header>
+        <nav class="navbar">
+            <ul class="nav-links">
+                <li><a href="#skills">Habilidades</a></li>
+                <li><a href="#work">Experiencia</a></li>
+                <li><a href="#resume">Currículum</a></li>
+                <li><a href="#contact">Contáctame</a></li>
+            </ul>
+        </nav>
+    </header>
 
     <!-- Sección principal (Hero) -->
     <section class="hero">
@@ -36,7 +45,9 @@
         </div>
     </section>
 
-    <!-- Footer -->
-    {% include partials/footer.html %}
+    <!-- Footer (anteriormente include) -->
+    <footer>
+        <p>© 2024 Estevan Castro</p>
+    </footer>
 </body>
 </html>
