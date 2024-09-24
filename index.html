@@ -4,20 +4,18 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Estevan Castro | Ingeniero DevOps</title>
-    <link rel="stylesheet" href="/assets/css/reset.css">
-    <link rel="stylesheet" href="/assets/css/variables.css">
-    <link rel="stylesheet" href="/assets/css/layout.css">
-    <link rel="stylesheet" href="/assets/css/typography.css">
-    <link rel="stylesheet" href="/assets/css/components.css">
+    <!-- Ruta correcta al archivo de estilos -->
+    <link rel="stylesheet" href="/assets/css/styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
+    <!-- Aquí se incluye la cabecera (header) desde un archivo parcial -->
+    {% include header.html %}
 
-    {% include header.html %}  <!-- Esto debe funcionar correctamente -->
-
+    <!-- Sección de presentación o "hero" -->
     <section class="hero">
         <div class="hero-content">
-            <h1>¡Hola a todos, soy Estevan <span class="hand-wave">👋</span>!</h1>
+            <h1>¡Hola a todos, soy Estevan<span class="hand-wave">👋</span>!</h1>
             <p>
                 Ingeniero DevOps especializado en automatización de despliegues y orquestación de infraestructura utilizando 
                 tecnologías como Docker, Kubernetes y Jenkins. Me dedico a optimizar procesos y crear entornos eficientes, 
@@ -33,7 +31,8 @@
         </div>
     </section>
 
-    {% include footer.html %}  <!-- Esto debe funcionar correctamente -->
+    <!-- Aquí se incluye el pie de página (footer) desde un archivo parcial -->
+    {% include footer.html %}
 
 </body>
 </html>
