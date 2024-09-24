@@ -4,15 +4,20 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Estevan Castro | Ingeniero DevOps</title>
-    <!-- Ruta correcta al archivo de estilos -->
-    <link rel="stylesheet" href="/assets/css/styles.css">
+    <!-- Enlace a los CSS separados -->
+    <link rel="stylesheet" href="assets/css/reset.css">
+    <link rel="stylesheet" href="assets/css/variables.css">
+    <link rel="stylesheet" href="assets/css/typography.css">
+    <link rel="stylesheet" href="assets/css/layout.css">
+    <link rel="stylesheet" href="assets/css/components.css">
+    <link rel="stylesheet" href="assets/css/styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <!-- Aquí se incluye la cabecera (header) desde un archivo parcial -->
-    {% include header.html %}
+    <!-- Header -->
+    {% include partials/header.html %}
 
-    <!-- Sección de presentación o "hero" -->
+    <!-- Sección principal (Hero) -->
     <section class="hero">
         <div class="hero-content">
             <h1>¡Hola a todos, soy Estevan<span class="hand-wave">👋</span>!</h1>
@@ -23,16 +28,15 @@
             </p>
             <div class="cta-buttons">
                 <a href="#contact" class="btn">Contáctame</a>
-                <a href="/assets/documents/CV_Estevan_Castro.pdf" download class="btn">Descargar mi Currículum</a>
+                <a href="assets/documents/CV_Estevan_Castro.pdf" download class="btn">Descargar mi Currículum</a>
             </div>
         </div>
         <div class="hero-image">
-            <img src="/assets/images/logo.svg" alt="Ilustración DevOps">
+            <img src="assets/images/logo.svg" alt="Ilustración DevOps">
         </div>
     </section>
 
-    <!-- Aquí se incluye el pie de página (footer) desde un archivo parcial -->
-    {% include footer.html %}
-
+    <!-- Footer -->
+    {% include partials/footer.html %}
 </body>
 </html>

@@ -1,24 +1,26 @@
-/* Botones y componentes */
-.cta-buttons {
-    margin-top: 40px;
+.hero {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 100px 50px;
+    background-color: #f8f9fa;
 }
 
-.cta-buttons .btn {
-    text-decoration: none;
-    color: white;
-    background-color: var(--primary-color);
-    padding: 10px 20px;
-    margin: 10px;
-    border-radius: var(--btn-radius);
-    transition: background-color 0.3s ease;
+.hero-content {
+    max-width: 600px;
+    text-align: left;
+    margin-right: 50px;
 }
 
-.cta-buttons .btn:hover {
-    background-color: #0056b3;
+.hero-content h1 {
+    font-size: 3rem;
+    display: flex;
+    align-items: center;
+    white-space: nowrap;
 }
 
-.hand-wave {
-    margin-left: 10px; /* Ajustar la mano más cerca del nombre */
+.hero-content h1 .hand-wave {
+    margin-left: 10px;
     display: inline-block;
     transform-origin: 70% 70%;
     animation: wave-animation 1.5s infinite;
@@ -33,4 +35,28 @@
     50% { transform: rotate(10deg); }
     60% { transform: rotate(0deg); }
     100% { transform: rotate(0deg); }
+}
+
+.cta-buttons {
+    margin-top: 40px;
+}
+
+.cta-buttons .btn {
+    text-decoration: none;
+    color: white;
+    background-color: var(--primary-color);
+    padding: 10px 20px;
+    margin: 10px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.cta-buttons .btn:hover {
+    background-color: #0056b3;
+}
+
+.hero-image img {
+    max-width: 500px;
+    height: auto;
+    margin-left: 50px;
 }
