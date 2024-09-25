@@ -4,6 +4,7 @@
     align-items: center;
     padding: 100px 50px;
     background-color: #f8f9fa;
+    flex-wrap: wrap; /* Permite que los elementos se ajusten en pantallas pequeñas */
 }
 
 .hero-content {
