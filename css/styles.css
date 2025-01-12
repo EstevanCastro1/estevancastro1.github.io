@@ -6,13 +6,14 @@ body {
     font-family: 'Roboto', sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f0f2f5; /* Fondo neutro claro */
-    color: #333; /* Texto oscuro para contraste */
+    background-color: #f0f2f5;
+    color: #333;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: space-between;
-    height: 100vh; /* Ajusta todo al tamaño de la pantalla */
+    height: 100vh;
+    overflow: hidden;
 }
 
 h1, h2, p {
@@ -20,17 +21,30 @@ h1, h2, p {
     padding: 0;
 }
 
+/* Animación para la página */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
 /* Encabezado */
 .header {
     position: relative;
     width: 100%;
-    height: 30%; /* Reduce el tamaño del encabezado */
-    background: #ff7e5f; /* Fondo vibrante */
+    height: 30%;
+    background: linear-gradient(135deg, #ff7e5f, #feb47b);
     display: flex;
     align-items: center;
     justify-content: center;
     text-align: center;
     color: white;
+    animation: fadeIn 1s ease-out;
 }
 
 .header .overlay {
@@ -40,12 +54,12 @@ h1, h2, p {
 }
 
 .header .logo {
-    font-size: 1.8em; /* Tamaño más pequeño */
+    font-size: 2em;
     font-weight: 700;
 }
 
 .header .tagline {
-    font-size: 0.9em; /* Tamaño más pequeño */
+    font-size: 1em;
 }
 
 /* Catálogo */
@@ -53,90 +67,150 @@ h1, h2, p {
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 15px; /* Reduce el espacio entre las tarjetas */
+    gap: 20px;
     width: 100%;
+    flex-wrap: wrap; /* Permite que las tarjetas se ajusten en dispositivos pequeños */
+    animation: fadeIn 1s ease-out;
 }
 
 .categoria {
     display: flex;
-    gap: 15px; /* Reduce el espacio entre tarjetas */
+    gap: 20px;
     justify-content: center;
+    flex-wrap: wrap; /* Ajuste automático en varias filas */
+    animation: fadeIn 1.5s ease-out;
 }
 
 /* Tarjetas del Catálogo */
 .card {
-    background-color: white; /* Fondo base blanco */
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra ligera */
+    background-color: white;
+    border-radius: 15px;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
     overflow: hidden;
-    width: 200px; /* Tamaño más compacto */
+    width: 220px;
     text-align: center;
     transition: transform 0.3s, box-shadow 0.3s, background-color 0.3s;
-    padding: 10px; /* Espaciado interno */
-    border-top: 5px solid; /* Bordes superiores diferenciados */
+    padding: 15px;
+    border-top: 6px solid;
+    cursor: pointer;
 }
 
 /* Tarjeta para Apple */
 .card:nth-child(1) {
-    background-color: #ffe8e8; /* Rosa pálido */
-    border-top-color: #ff7e5f; /* Borde superior en tono vibrante */
+    background-color: #ffe8e8;
+    border-top-color: #ff7e5f;
+}
+
+.card:nth-child(1):hover {
+    background-color: #ffdede;
+    border-top-color: #ff5e5e;
 }
 
 /* Tarjeta para Android */
 .card:nth-child(2) {
-    background-color: #e8ffe8; /* Verde pálido */
-    border-top-color: #4caf50; /* Borde superior en tono verde vibrante */
+    background-color: #e8ffe8;
+    border-top-color: #4caf50;
 }
 
-/* Efecto hover para ambas tarjetas */
+.card:nth-child(2):hover {
+    background-color: #d8ffd8;
+    border-top-color: #388e3c;
+}
+
+/* Efecto hover */
 .card:hover {
-    transform: translateY(-8px);
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+    transform: scale(1.05);
+    box-shadow: 0 12px 20px rgba(0, 0, 0, 0.2);
 }
 
 /* Estilo para las imágenes */
 .card img {
-    width: 80%; /* Imágenes más compactas */
+    width: 70%;
     height: auto;
     margin-bottom: 10px;
     transition: transform 0.3s;
 }
 
 .card:hover img {
-    transform: scale(1.05); /* Pequeña ampliación al pasar el mouse */
+    transform: rotate(-3deg) scale(1.1);
 }
 
 /* Estilo para los títulos */
 .card h2 {
-    font-size: 1.2em;
-    margin-bottom: 5px;
-    color: #333; /* Texto oscuro para contraste */
+    font-size: 1.3em;
+    margin-bottom: 10px;
+    color: #333;
 }
 
 /* Botones */
 .boton {
     display: inline-block;
     margin: 10px 0;
-    padding: 8px 15px;
-    background: #6D5BBA; /* Fondo púrpura vibrante */
+    padding: 10px 20px;
+    background: #6D5BBA;
     color: white;
     text-decoration: none;
-    font-size: 0.9em;
-    border-radius: 5px;
+    font-size: 1em;
+    border-radius: 50px;
     transition: background 0.3s, transform 0.2s;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 .boton:hover {
     background: #8D58BF;
-    transform: scale(1.1); /* Efecto de zoom */
+    transform: scale(1.1);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
 }
 
 /* Footer */
 .footer {
-    background-color: #333; /* Fondo oscuro */
+    background-color: #333;
     color: white;
     text-align: center;
-    padding: 5px 0;
-    font-size: 0.8em; /* Texto más pequeño */
+    padding: 10px 0;
+    font-size: 0.8em;
     width: 100%;
+    animation: fadeIn 2s ease-out;
+}
+
+/* --- Media Queries para Responsividad --- */
+
+/* Ajustes para pantallas pequeñas (móviles) */
+@media (max-width: 768px) {
+    .header {
+        height: 40%; /* Aumenta el encabezado en móviles */
+    }
+
+    .header .logo {
+        font-size: 1.6em; /* Ajusta el tamaño del texto */
+    }
+
+    .header .tagline {
+        font-size: 0.9em; /* Ajusta el texto */
+    }
+
+    .card {
+        width: 180px; /* Reduce el tamaño de las tarjetas */
+    }
+
+    .card h2 {
+        font-size: 1.1em; /* Ajusta el tamaño del título */
+    }
+
+    .boton {
+        font-size: 0.9em; /* Botones más pequeños */
+        padding: 8px 15px;
+    }
+}
+
+/* Ajustes para pantallas muy pequeñas (menos de 480px) */
+@media (max-width: 480px) {
+    .card {
+        width: 100%; /* Ocupa todo el ancho disponible */
+        margin: 10px; /* Espaciado entre tarjetas */
+    }
+
+    .catalogo {
+        flex-direction: column; /* Apila las tarjetas verticalmente */
+    }
 }
