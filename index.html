@@ -5,26 +5,29 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Catálogo de Accesorios</title>
     <link rel="stylesheet" href="css/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
     <header class="header">
-        <h1 class="logo">Accesorios Premium</h1>
-        <p class="tagline">Todo lo que necesitas para tu dispositivo</p>
+        <div class="overlay">
+            <h1 class="logo">Accesorios Premium</h1>
+            <p class="tagline">Descubre los mejores accesorios para tus dispositivos</p>
+        </div>
     </header>
 
-    <main class="catalogo">
+    <main class="catalogo" id="catalogo">
         <section class="categoria">
             <div class="card">
-                <img src="images/iphone-accessories.jpg" alt="Accesorios para iPhone">
-                <h2>Accesorios para iPhone</h2>
-                <p>Encuentra fundas, cargadores y más diseñados exclusivamente para iPhone.</p>
-                <a href="iphone.html" class="boton">Ver más</a>
+                <img src="images/apple.png" alt="Catálogo de Accesorios para iPhone">
+                <h2>Catálogo para iPhone</h2>
+                <p>Descarga nuestro catálogo exclusivo de accesorios para iPhone.</p>
+                <a href="pdf/catalogo-iphone.pdf" class="boton" download="Catalogo_iPhone.pdf">Descargar PDF</a>
             </div>
             <div class="card">
-                <img src="images/android-accessories.jpg" alt="Accesorios para Android">
-                <h2>Accesorios para Android</h2>
-                <p>Explora nuestra colección de accesorios compatibles con dispositivos Android.</p>
-                <a href="android.html" class="boton">Ver más</a>
+                <img src="images/android.png" alt="Catálogo de Accesorios para Android">
+                <h2>Catálogo para Android</h2>
+                <p>Obtén nuestro catálogo detallado de accesorios para dispositivos Android.</p>
+                <a href="pdf/catalogo-android.pdf" class="boton" download="Catalogo_Android.pdf">Descargar PDF</a>
             </div>
         </section>
     </main>
